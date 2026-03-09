@@ -2,7 +2,7 @@ import { Outlet, ScrollRestoration } from "react-router";
 
 const RouteLayout = () => {
     return (
-        <div className="antialiased font-sans text-stone-900 bg-stone-50 selection:bg-sage-200">
+        <div className="antialiased font-sans text-stone-900 bg-[#e9ba0d4b] ">
             <ScrollRestoration/>
 
             <Outlet/>
