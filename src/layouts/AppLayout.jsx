@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { Outlet, useLocation, Link} from "react-router";
-import { ChevronDown, ChevronUp, PlusCircle, Settings, Search,LayoutDashboard } from "lucide-react";
+import {PanelLeftOpen , PanelLeftClose, PlusCircle, Settings, Search,LayoutDashboard } from "lucide-react";
 
 const AppLayout = () => {
 
-    const [isCollapsed, setIsCollapsed] = useState(true)
+    const [isCollapsed, setIsCollapsed] = useState(false)
     const location = useLocation()
 
 
@@ -14,8 +14,13 @@ const AppLayout = () => {
     return (
     <div className="flex bg-stone-50 overflow-hidden h-screen">
 
-        <aside className={`flex flex-col border-r border-stone-200 bg-slate-100 transition-all duration-300 ${isCollapsed? 'w-10': 'w-50'}`}>
-
+        <aside className={`flex flex-col border-r border-stone-200 bg-slate-100 transition-all duration-300 ${isCollapsed? 'w-15': 'w-40'}`}>
+            <div className="h-16 flex items-center justify-between p-4 border-b border-stone-500">
+                {!isCollapsed && <span className="font-mono font-bold tracking-tighter text-lg">Z_K</span>}
+                <button onClick={()=>setIsCollapsed(!isCollapsed)} className="p-1 hover:bg-stone-100 rounded-md text-stone-400 hover:text-stone-900 transition-colors duration-200 hover:cursor-pointer">
+                    {isCollapsed? <PanelLeftOpen size={22}/>: <PanelLeftClose size={22}/>}
+                </button>
+            </div>
         </aside>
     
 
