@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Outlet, useLocation, Link} from "react-router";
-import {PanelLeftOpen , PanelLeftClose, PlusCircle, Settings, Search,LayoutDashboard } from "lucide-react";
+import {PanelLeftOpen , PanelLeftClose, PlusCircle, Settings, Search,LayoutDashboard, icons } from "lucide-react";
+import SideBarIcons from "../components/SideBarIcons";
 
 const AppLayout = () => {
 
@@ -21,7 +22,13 @@ const AppLayout = () => {
                     {isCollapsed? <PanelLeftOpen size={22}/>: <PanelLeftClose size={22}/>}
                 </button>
             </div>
+
+            <nav className="">
+                <SideBarIcons to={'/boards'} icon={<LayoutDashboard size={22}/>} collapsed={isCollapsed} active={isActive('/boards')} label='My boards'/>
+            </nav>
         </aside>
+
+    
     
 
         <main className="grow overflow-y-auto">
