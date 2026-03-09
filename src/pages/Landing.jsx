@@ -10,8 +10,8 @@ const Landing = () => {
                         <p className="text-3xl font-bold">Focus in Flow</p>
                         <p className="font-semibold text-lg text-slate-400">A minimalist Kanban experience designed to reduce congnitive load, block out the noise and keep you and or your team fully in the zone.</p>
                         <div className="flex justify-between gap-5">
-                            <div className="bg-green-700 text-slate-200 flex justify-around items-center  px-5 py-2 w-[70%] rounded-md">Create Your First Board <MoveRight size={22}/></div>
-                            <div className="flex text-sm justify-between items-center  px-5 rounded-md border hover:bg-blue-400 hover:cursor-pointer active:bg-blue-500 hover:text-slate-200 transition-all duration-200 ">Explore<MoveDown size={12}/></div>
+                            <button className="bg-green-700 text-slate-200 flex justify-around items-center  px-5 py-2 w-[70%] rounded-md hover:opacity-90 active:scale-95 transition-all">Create Your First Board <MoveRight size={22}/></button>
+                            <button className="flex text-sm justify-between items-center  px-5 rounded-md border hover:bg-blue-400 hover:cursor-pointer active:bg-blue-500 active:scale-110 hover:text-slate-200 transition-all duration-200 ">Explore<MoveDown size={12}/></button>
                         </div>
                     </div>
                     <div className="w-120 h-70 ">
