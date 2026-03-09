@@ -22,12 +22,12 @@ const Landing = () => {
                                 className="group bg-stone-900 text-stone-50 flex items-center justify-center gap-3 px-8 py-4 w-full sm:w-auto rounded-xl font-semibold hover:bg-stone-800 transition-all active:scale-95"
                             >
                                 Create Your First Board 
-                                <MoveRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                                <MoveRight size={20} className="group-hover:translate-x-2 transition-transform" />
                             </Link>
                             
-                            <button className="flex items-center justify-center gap-2 px-8 py-4 w-full sm:w-auto rounded-xl border border-stone-200 font-semibold hover:bg-stone-100 transition-all text-stone-600">
+                            {/* <button className="flex items-center justify-center gap-2 px-8 py-4 w-full sm:w-auto rounded-xl border border-stone-200 font-semibold hover:bg-stone-100 hover:cursor-pointer active:scale-95 active:bg-stone-400 transition-all text-stone-600">
                                 Explore <MoveDown size={16} />
-                            </button>
+                            </button> */}
                         </div>
                     </div>
 
@@ -62,7 +62,7 @@ const Landing = () => {
                         </div>
 
                         <div className="group bg-stone-600 p-8 rounded-3xl flex flex-col justify-end gap-4 text-stone-50 hover:bg-stone-800 transition-colors">
-                            <div className="w-fit p-4 bg-stone-800 rounded-2xl group-hover:-rotate-6 transition-transform">
+                            <div className="w-fit p-4 bg-stone-800 rounded-2xl group-hover:-rotate-6 transition-transform ">
                                 <EyeOff size={28} className="text-stone-100" />
                             </div>
                             <div>
