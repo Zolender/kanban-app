@@ -23,7 +23,7 @@ const AppLayout = () => {
                 </button>
             </div>
 
-            <nav className="">
+            <nav className="grow py-6 px-auto">
                 <SideBarIcons to={'/boards'} icon={<LayoutDashboard size={22}/>} collapsed={isCollapsed} active={isActive('/boards')} label='My boards'/>
             </nav>
         </aside>
