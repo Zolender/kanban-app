@@ -3,6 +3,7 @@ import RouteLayout from "../layouts/RouteLayout";
 import PublicLayout from "../layouts/PublicLayout";
 import Landing from "../pages/Landing";
 import AppLayout from "../layouts/AppLayout";
+import { getData } from "../utils/storage";
 
 const router = createBrowserRouter([
     {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
             {
                 path: '/boards',
                 element: <AppLayout/>,
+                loader: ()=> {
+                    const data = getData()
+                    return data.boards
+                },
                 children: [
 
                 ]

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Outlet, useLocation, Link} from "react-router";
+import { Outlet, useLocation} from "react-router";
 import {PanelLeftOpen , PanelLeftClose, PlusCircle, Settings, Search,LayoutDashboard, icons } from "lucide-react";
 import SideBarIcons from "../components/SideBarIcons";
 
@@ -25,6 +25,10 @@ const AppLayout = () => {
 
             <nav className="grow py-6 px-auto">
                 <SideBarIcons to={'/boards'} icon={<LayoutDashboard size={22}/>} collapsed={isCollapsed} active={isActive('/boards')} label='My boards'/>
+                <SideBarIcons to={'/search'} icon={<Search size={22}/>} collapsed={isCollapsed} active={isActive('/search')} label='Search'/>
+                <div className="p-4 border-t border-stone-100">
+                    <SideBarIcons to={"/settings"} icon={<Settings size={22}/>} collapsed={isCollapsed} active={isActive('/settings')} label='Settings'/>
+                </div>
             </nav>
         </aside>
 
